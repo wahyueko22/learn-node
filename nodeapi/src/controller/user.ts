@@ -21,6 +21,25 @@ async (req: any, res: Response) => {
     }
 })
 
+usersRouter.post(path + '/check-user1', checkAuthentication,
+async (req: any, res: Response) => {
+    try {
+        //sddsfdsfs
+        //dsfsdf
+        let a= 5;
+        let b = a;
+        let c = 6;
+        res.status(200).json({
+            userId : req?.user?.id as string,
+            email :  req?.user?.email as string,
+            message: "success access",
+            status: true
+        })
+        return;            
+    } catch (err) {
+    }
+})
+
 export default usersRouter
 
 
